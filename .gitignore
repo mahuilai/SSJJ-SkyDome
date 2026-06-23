@@ -1,0 +1,81 @@
+# .NET / C# / Visual Studio
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# NuGet
+packages/
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.DotSettings
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary / Tool workspaces
+apktool_mcp_server_workspace/
+scratch/bin/
+scratch/obj/
+scratch/**/*.exe
+scratch/**/*.dll
+scratch/**/*.pdb
+*.tmp
+*.temp
+*.log
+
+# Personal / Sensitive - NEVER commit ID or photos in root
+身份证.jpg
+id.jpg
+ID.jpg
+
+# Unity extracted (if present)
+Library/
+Temp/
+Obj/
+Logs/
+ProjectSettings/
+
+# Binaries: ignore most, but explicitly allow vendored ones in Resources/
+**/*.dll
+**/*.pdb
+**/*.exe
+**/*.so
+**/*.dylib
+
+# Exception: allow vendored dependencies inside Resources/
+!Resources/**/
+!Resources/**/*.dll
+!Resources/**/*.pdb
+
+# Keep fonts
+!Resources/**/*.ttf
+
+# Archives
+*.zip
+*.7z
+*.rar

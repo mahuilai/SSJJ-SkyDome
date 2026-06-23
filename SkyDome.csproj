@@ -1,0 +1,511 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E111C19-AF18-49EB-8FB6-D16499327FAD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SkyDome</RootNamespace>
+    <AssemblyName>SkyDome</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <LangVersion>8.0</LangVersion>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArabicSupport">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\ArabicSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="base.net">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\base.net.dll</HintPath>
+    </Reference>
+    <Reference Include="configNet">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\configNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DebugUtils">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\DebugUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween43">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\DOTween43.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\DOTween46.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Entitas.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.Blueprints">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Entitas.Blueprints.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.CodeGeneration.Attributes">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Entitas.CodeGeneration.Attributes.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.Unity">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Entitas.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.Utils">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Entitas.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.VisualDebugging.Unity">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Entitas.VisualDebugging.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="fabl">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\fabl.dll</HintPath>
+    </Reference>
+    <Reference Include="fabl.Appenders">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\fabl.Appenders.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zlib.CF">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Ionic.Zlib.CF.dll</HintPath>
+    </Reference>
+    <Reference Include="itween.net">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\itween.net.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Loxodon.Framework">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Loxodon.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Loxodon.Framework.Binding">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Loxodon.Framework.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="Loxodon.Framework.Localizations">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Loxodon.Framework.Localizations.dll</HintPath>
+    </Reference>
+    <Reference Include="Loxodon.Framework.View">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Loxodon.Framework.View.dll</HintPath>
+    </Reference>
+    <Reference Include="Loxodon.Log">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Loxodon.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="LZ4">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="Magic">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Magic.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>D:\项目\阳翳\SkyDome杜海鹏内部开源\Resources\Mono\Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyDome.CoreRuntime">
+      <HintPath>D:\项目\阳翳\SkyDome杜海鹏内部开源\Resources\MonoMod\SkyCore.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyDome.Utils">
+      <HintPath>D:\项目\阳翳\SkyDome杜海鹏内部开源\Resources\MonoMod\SkyCoreUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="physics.net">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\physics.net.dll</HintPath>
+    </Reference>
+    <Reference Include="Pri.LongPath">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Pri.LongPath.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="RenderHeads.AVProMovieCapture.Demos">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\RenderHeads.AVProMovieCapture.Demos.dll</HintPath>
+    </Reference>
+    <Reference Include="RenderHeads.AVProMovieCapture.Runtime">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\RenderHeads.AVProMovieCapture.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJ.Contract">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJ.Contract.dll</HintPath>
+    </Reference>
+    <Reference Include="ssjj.net">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\ssjj.net.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJAnim_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJAnim_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJAssetBundleSystem_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJAssetBundleSystem_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJAsset_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJAsset_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJAvater_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJAvater_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJBase_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJBase_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJEntitas_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJEntitas_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJIK_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJIK_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJMath_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJMath_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJNetworking_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJNetworking_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJPhysics_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJPhysics_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJRunTimeDataSample_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJRunTimeDataSample_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJSceneLoader_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJSceneLoader_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJSpine_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJSpine_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJUf3d_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJUf3d_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJUIEditor_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJUIEditor_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJUniRx_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJUniRx_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJUnityMaps_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJUnityMaps_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="SSJJUserCmd_Library">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\SSJJUserCmd_Library.dll</HintPath>
+    </Reference>
+    <Reference Include="System"><HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\System.dll</HintPath></Reference>
+    <Reference Include="System.Core"><HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\System.Core.dll</HintPath></Reference>
+    <Reference Include="System.Drawing"><HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\System.Drawing.dll</HintPath></Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Messaging"><HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\System.Messaging.dll</HintPath></Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data"><HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\System.Data.dll</HintPath></Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="weaponPredicateNet.net">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\weaponPredicateNet.net.dll</HintPath>
+    </Reference>
+    <Reference Include="zlib.net">
+      <HintPath>D:\项目\阳翳\SSJJ_Mods\TriggerBot\依赖\zlib.net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GlobalEvents.cs" />
+    <Compile Include="Cfg\Config.cs" />
+    <Compile Include="Cfg\ConfigManager.cs" />
+    <Compile Include="Cfg\Menu.cs" />
+    <Compile Include="Engine\MouseSimulator.cs" />
+    <Compile Include="Feature\WorldSettings.cs" />
+    <Compile Include="Feature\Visuals\PublicClassManager.cs" />
+    <Compile Include="MonoMod_Hook\HookManager.cs" />
+      <Compile Include="MonoMod_Hook\MethodHook.cs" />
+    <Compile Include="Entity\PlayerInfo.cs" />
+    <Compile Include="Entity\PlayerUpdate.cs" />
+    <Compile Include="Extension\ReflectionExtensions.cs" />
+    <Compile Include="Feature\AutoTrigger\WindSpiritRecall.cs" />
+    <Compile Include="Feature\Legit\Aimbot.cs" />
+    <Compile Include="Feature\Legit\Triggerbot.cs" />
+    <Compile Include="Feature\Rage\AntiAim.cs" />
+    <Compile Include="Feature\Rage\Silentbot.cs" />
+    <Compile Include="Feature\NoRecoil.cs" />
+    <Compile Include="Feature\Stubs.cs" />
+    <Compile Include="Feature\Resolver.cs" />
+    <Compile Include="Feature\Say.cs" />
+    <Compile Include="Feature\SkinChanger.cs" />
+    <Compile Include="Feature\Visuals\AntiAimIndicator.cs" />
+    <Compile Include="Feature\Visuals\BoundingBox3D.cs" />
+    <Compile Include="Feature\Visuals\C4Timer.cs" />
+    <Compile Include="Feature\Visuals\Chams.cs" />
+    <Compile Include="Feature\Visuals\Crosshair.cs" />
+    <Compile Include="Feature\Visuals\FeatureIndicator.cs" />
+    <Compile Include="Feature\Visuals\ItemESP.cs" />
+    <Compile Include="Feature\Visuals\ItemOutline.cs" />
+    <Compile Include="Feature\Visuals\MoveEntityESP.cs" />
+    <Compile Include="Feature\Visuals\Radar.cs" />
+    <Compile Include="Feature\Visuals\SceneBuffESP.cs" />
+    <Compile Include="Feature\Visuals\SpectatorList.cs" />
+    <Compile Include="Feature\Visuals\Trace.cs" />
+    <Compile Include="Feature\Visuals\WallHack.cs" />
+    <Compile Include="Loader.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Properties\Resources.2.cs" />
+    <Compile Include="Render\ImmediateRenderer.cs" />
+    <Compile Include="Render\OverLay.cs" />
+    <Compile Include="Utilities\MathUtility.cs" />
+    <Compile Include="Utilities\PlayerUtility.cs" />
+    <Compile Include="Utilities\ViewportUtility.cs" />
+    <Compile Include="Utilities\AntiDetection.cs" />
+    <Compile Include="Utilities\StringCipher.cs" />
+    <Compile Include="Utilities\PathRendererHelper.cs" />
+    <Compile Include="Utilities\MonoBypass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Mono\Cecil.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MonoMod\SkyCore.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MonoMod\SkyCoreUtils.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\menu_font.ttf" />
+    <EmbeddedResource Include="Resources\ProggyTiny.ttf" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+  <!-- ConfuserEx obfuscation (Release only) -->
+  <Target Name="ConfuserEx" AfterTargets="AfterBuild" Condition="'$(Configuration)' == 'Release'">
+    <PropertyGroup>
+      <ConfuserExExe>D:\Compressed\ConfuserEx-CLI\Confuser.CLI.exe</ConfuserExExe>
+    </PropertyGroup>
+    <Exec Command="&quot;$(ConfuserExExe)&quot; -n &quot;$(ProjectDir)SkyDome.crproj&quot;"
+          Condition="Exists('$(ConfuserExExe)')"
+          IgnoreExitCode="true"
+          ContinueOnError="true" />
+    <Message Text="ConfuserEx not found - skipping obfuscation" 
+             Condition="!Exists('$(ConfuserExExe)')" 
+             Importance="High" />
+  </Target>
+</Project>
+
+

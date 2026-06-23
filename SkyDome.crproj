@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project baseDir="D:\项目\阳翳\SkyDome杜海鹏内部开源\bin\Release" outputDir="D:\项目\阳翳\SkyDome杜海鹏内部开源\bin\Release\Confused" xmlns="http://confuser.codeplex.com">
+  <module path="SkyDome.dll">
+    <!-- 零保护：测试 ConfuserEx 直通是否破坏 DLL -->
+  </module>
+</project>
